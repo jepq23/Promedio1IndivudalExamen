@@ -18,7 +18,8 @@ namespace Promedio1Individual
         }
         public virtual float RecibirDano(float dmgRecibido)
         {
-            return vida - dmgRecibido;
+            vida -= dmgRecibido;
+            return vida;
         }
         public virtual float AtaqueDMG(float dmg)
         {
