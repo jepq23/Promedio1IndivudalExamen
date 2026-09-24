@@ -24,5 +24,15 @@ namespace Promedio1Individual
         {
             return dmg;
         }
+
+        public virtual float ObtenerVida()
+        {
+            return vida;
+        }
+
+        public virtual bool EstadoJugador()
+        {
+            return vida > 0;
+        }
     }
 }

@@ -10,16 +10,12 @@ namespace Promedio1Individual
     {
         private float balas;
 
-        public EnemigoRango(float vida, float daño, float balas)
+        public EnemigoRango(float vida, float daño, string nombre, float balas)
         {
             this.vida = vida;
             this.daño = daño;
+            this.nombre = nombre;
             this.balas = balas;
-        }
-
-        public override void RecibirDaño(float jugDaño)
-        {
-            vida -= jugDaño;
         }
 
         public override float CausarDaño()
@@ -31,11 +27,6 @@ namespace Promedio1Individual
             }
 
             return 0;
-        }
-
-        public override bool EstadoEnemigo()
-        {
-            return vida > 0;
         }
     }
 }

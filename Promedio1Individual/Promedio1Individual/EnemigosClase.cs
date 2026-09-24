@@ -8,8 +8,9 @@ namespace Promedio1Individual
 {
     internal class EnemigosClase
     {
-        public float vida;
-        public float daño;
+        protected float vida;
+        protected float daño;
+        protected string nombre;
 
         public EnemigosClase()
         {
@@ -23,12 +24,20 @@ namespace Promedio1Individual
         public virtual void RecibirDaño(float jugDaño)
         {
             vida -= jugDaño;
-            EstadoEnemigo();
         }
 
         public virtual bool EstadoEnemigo()
         {
             return vida > 0;
+        }
+        public string ObtenerNombre()
+        {
+            return nombre;
+        }
+
+        public float ObtenerVida()
+        {
+            return vida;
         }
     }
 }
